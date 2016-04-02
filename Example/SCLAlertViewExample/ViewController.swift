@@ -55,7 +55,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showInfo(sender: AnyObject) {
-        SCLAlertView().showInfo(kInfoTitle, subTitle: kSubtitle)
+        let alert = SCLAlertView()
+        alert.showCloseButton = false
+        alert.showTitle("DONE!", subTitle: "", duration: 2, completeText: nil, style: .Success)
+//        SCLAlertView().showInfo(kInfoTitle, subTitle: kSubtitle)
     }
 
 	@IBAction func showEdit(sender: AnyObject) {
